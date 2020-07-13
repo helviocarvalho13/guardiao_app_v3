@@ -18,8 +18,8 @@ class ProdSistemaRepository implements SistemaRepository {
     return await storage.read(key: 'token');
   }*/
 
-  //String retornaSistemasUrl = "http://localhost:8080/guardiaomobile/sistemas/";
-  String retornaSistemasUrl = "https://apps.tre-ma.jus.br/guardiaomobile/sistemas/";
+  String retornaSistemasUrl = "http://localhost:8080/guardiaomobile/sistemas/";
+  //String retornaSistemasUrl = "https://apps.tre-ma.jus.br/guardiaomobile/sistemas/";
 
   @override
   Future<List<Sistema>> retornaSistemas() async {

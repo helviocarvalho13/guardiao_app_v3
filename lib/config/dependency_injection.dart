@@ -18,6 +18,10 @@ import 'package:guardiao_app_v3/data/parceria/parceria_data.dart';
 import 'package:guardiao_app_v3/data/parceria/parceria_data_dev.dart';
 import 'package:guardiao_app_v3/data/parceria/parceria_data_prod.dart';
 
+import 'package:guardiao_app_v3/data/servidor/ferias_data.dart';
+import 'package:guardiao_app_v3/data/servidor/ferias_data_dev.dart';
+import 'package:guardiao_app_v3/data/servidor/ferias_data_prod.dart';
+
 import 'package:guardiao_app_v3/data/inicio/inicio_data.dart';
 import 'package:guardiao_app_v3/data/inicio/inicio_data_dev.dart';
 import 'package:guardiao_app_v3/data/inicio/inicio_data_prod.dart';
@@ -81,6 +85,15 @@ class Injector {
         return new DevParceriaRepository();
       default:
         return new ProdParceriaRepository();
+    }
+  }
+
+  FeriasRepository get feriasRepository {
+    switch (_flavor) {
+      case Flavor.DEV:
+        return new DevFeriasRepository();
+      default:
+        return new ProdFeriasRepository();
     }
   }
 

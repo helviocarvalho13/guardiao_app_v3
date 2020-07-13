@@ -12,6 +12,8 @@ import 'package:guardiao_app_v3/pages/carteira_funcional/CarteiraFuncionalBackPa
 import 'package:guardiao_app_v3/pages/clube_parceria/ExibirParceriaPage.dart';
 import 'package:guardiao_app_v3/pages/clube_parceria/DescricaoClubeParceriaPage.dart';
 import 'package:guardiao_app_v3/pages/portal_servidor/PortalServidorPage.dart';
+import 'package:guardiao_app_v3/pages/portal_servidor/FeriasPage.dart';
+import 'package:guardiao_app_v3/pages/portal_servidor/ContrachequePage.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -24,17 +26,19 @@ void main() async {
 }
 
 final routes = {
-  '/previewPage': (BuildContext context)                => new PreviewPage(),
-  '/autorizacaoPage': (BuildContext context)            => new AutorizacaoPage(),
-  '/loginPage': (BuildContext context)                  => new LoginPage(),
-  '/guardiaoPage': (BuildContext context)               => new GuardiaoPage(),
-  '/carteiraFuncionalFrontPage': (BuildContext context) => new CarteiraFuncionalFrontPage(),
-  '/carteiraFuncionalBackPage': (BuildContext context)  => new CarteiraFuncionalBackPage(),
-  '/clubeParceriaPage': (BuildContext context)          => new ClubeParceriaPage(),
-  '/clubeParceriaPage/parcerias': (BuildContext context)=> new ParceriasPage(),
-  '/clubeParceriaPage/parceria/exibir': (BuildContext context)=> new ExibirParceriaPage(),
-  '/clubeParceriaPage/clubeParcerias': (BuildContext context)=> new DescricaoClubeParceriaPage(),
-  '/portalServidor': (BuildContext context) => new PortalServidorPage(),
+  '/previewPage': (BuildContext context)                        => new PreviewPage(),
+  '/autorizacaoPage': (BuildContext context)                    => new AutorizacaoPage(),
+  '/loginPage': (BuildContext context)                          => new LoginPage(),
+  '/guardiaoPage': (BuildContext context)                       => new GuardiaoPage(),
+  '/carteiraFuncionalFrontPage': (BuildContext context)         => new CarteiraFuncionalFrontPage(),
+  '/carteiraFuncionalBackPage': (BuildContext context)          => new CarteiraFuncionalBackPage(),
+  '/clubeParceriaPage': (BuildContext context)                  => new ClubeParceriaPage(),
+  '/clubeParceriaPage/parcerias': (BuildContext context)        => new ParceriasPage(),
+  '/clubeParceriaPage/parceria/exibir': (BuildContext context)  => new ExibirParceriaPage(),
+  '/clubeParceriaPage/clubeParcerias': (BuildContext context)   => new DescricaoClubeParceriaPage(),
+  '/portalServidorPage': (BuildContext context)                 => new PortalServidorPage(),
+  '/portalServidorPage/ferias': (BuildContext context)          => new FeriasPage(),
+  '/portalServidorPage/contracheque': (BuildContext context)    => new ContrachequePage()
 };
 
 class InicioPage extends StatefulWidget {
