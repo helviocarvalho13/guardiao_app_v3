@@ -19,9 +19,8 @@ class ProdUsuarioRepository implements UsuarioRepository{
     return await storage.read(key: 'token');
   }*/
 
-  String retornaUsuarioUrl = "http://localhost:8080/guardiaomobile/identidadeFuncional/";
-
-  //String retornaUsuarioUrl = "https://apps.tre-ma.jus.br/guardiaomobile/identidadeFuncional/";
+  //String retornaUsuarioUrl = "http://localhost:8080/guardiaomobile/identidadeFuncional/";
+  String retornaUsuarioUrl = "https://apps.tre-ma.jus.br/guardiaomobile/identidadeFuncional/";
 
   @override
   Future<Usuario> retornaUsuario() async {

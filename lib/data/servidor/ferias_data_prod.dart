@@ -6,8 +6,8 @@ import 'package:shared_preferences/shared_preferences.dart';
 
 class ProdFeriasRepository implements FeriasRepository {
 
-  String retornaFeriasUrl = "http://localhost:8080/guardiaomobile/portalServidor/ferias";
-  //String retornaFeriasUrl = "https://apps.tre-ma.jus.br/guardiaomobile/portalServidor/ferias";
+  //String retornaFeriasUrl = "http://localhost:8080/guardiaomobile/portalServidor/ferias";
+  String retornaFeriasUrl = "https://apps.tre-ma.jus.br/guardiaomobile/portalServidor/ferias";
 
   Future<String> _getToken() async {
     SharedPreferences prefs = await SharedPreferences.getInstance();

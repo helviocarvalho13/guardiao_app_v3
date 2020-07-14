@@ -3,6 +3,7 @@ import 'dart:async';
 class Parceria{
 
   String _id;
+  String _renovacao;
   String _ramoAtividade;
   String _superRamoAtividade;
   String _nome;
@@ -25,7 +26,7 @@ class Parceria{
   String _telefone1;
   String _telefone2;
 
-  Parceria(this._id, this._nome, this._ramoAtividade,
+  Parceria(this._id, this._renovacao, this._nome, this._ramoAtividade,
     this._superRamoAtividade, this._descricaoRamoAtividade, this._descontos,
   this._endereco, this._bairro, this._tempoDuracaoParceria, this._logomarcaUrl,
   this._tabelaInfoParceiroUrl, this._termoParceriaUrl, this._facebook, this._instagram, this._email, this._googleMaps,
@@ -35,6 +36,7 @@ class Parceria{
 
   Parceria.fromMap(Map<String, dynamic> map)
   :      _id                     = map['id'],
+        _renovacao              = map['renovacao'],
         _nome                   = map['nome'],
         _ramoAtividade          = map['ramoAtividade'],
         _superRamoAtividade     = map['superRamoAtividade'],
@@ -56,6 +58,7 @@ class Parceria{
         _telefone2              = map['telefone2'];
 
   String get id                     => _id;
+  String get renovacao              => _renovacao;
   String get nome                   => _nome;
   String get ramoAtividade          => _ramoAtividade;
   String get superRamoAtividade     => _superRamoAtividade;

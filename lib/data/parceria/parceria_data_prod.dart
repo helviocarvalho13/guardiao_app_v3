@@ -7,8 +7,8 @@ import 'package:path_provider/path_provider.dart';
 
 class ProdParceriaRepository implements ParceriaRepository {
 
-  String retornaParceriasUrl = "http://localhost:8080/guardiaomobile/parcerias/";
-  //String retornaParceriasUrl = "https://apps.tre-ma.jus.br/guardiaomobile/parcerias/";
+  //String retornaParceriasUrl = "http://localhost:8080/guardiaomobile/parcerias/";
+  String retornaParceriasUrl = "https://apps.tre-ma.jus.br/guardiaomobile/parcerias/";
 
   Future<String> _getToken() async {
     SharedPreferences prefs = await SharedPreferences.getInstance();

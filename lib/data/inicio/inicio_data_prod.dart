@@ -6,8 +6,8 @@ import 'package:shared_preferences/shared_preferences.dart';
 
 class ProdInicioRepository implements InicioRepository {
 
-  String retornaTokenValidoUrl = "http://localhost:8080/guardiaomobile/validaToken";
-  //String retornaTokenValidoUrl = "https://apps.tre-ma.jus.br/guardiaomobile/validaToken";
+  //String retornaTokenValidoUrl = "http://localhost:8080/guardiaomobile/validaToken";
+  String retornaTokenValidoUrl = "https://apps.tre-ma.jus.br/guardiaomobile/validaToken";
 
   Future<String> _getToken() async {
     SharedPreferences prefs = await SharedPreferences.getInstance();

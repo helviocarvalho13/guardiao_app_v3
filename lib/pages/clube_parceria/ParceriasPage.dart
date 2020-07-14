@@ -163,12 +163,13 @@ GestureDetector retornaListaParcerias(Usuario usuario, List<Parceria> _parcerias
   );
 
   final subHeaderTextStyle = regularTextStyle.copyWith(
-      fontSize: 8.0
+      fontSize: 10.0,
+      color: Colors.red
   );
 
   final parceriaCardContent = new Container(
 
-    margin: new EdgeInsets.fromLTRB(76.0, 8.0, 16.0, 8.0),
+    margin: new EdgeInsets.fromLTRB(76.0, 4.0, 16.0, 8.0),
     constraints: new BoxConstraints.expand(),
     child: new Column(
       crossAxisAlignment: CrossAxisAlignment.start,
@@ -177,10 +178,10 @@ GestureDetector retornaListaParcerias(Usuario usuario, List<Parceria> _parcerias
         new Text(_parcerias[index].nome,
           style: headerTextStyle,
         ),
-        /*new Container(height: 4.0),
-        new Text(_parcerias[index].endereco,
-            style: subHeaderTextStyle
-        ),*/
+        new Container(height: 8.0),
+        new Text(_parcerias[index].renovacao,
+            style: subHeaderTextStyle,
+        ),
       ],
     ),
   );

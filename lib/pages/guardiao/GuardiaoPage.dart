@@ -186,8 +186,8 @@ class _GuardiaoPageState extends State<GuardiaoPage> implements UsuarioViewContr
   }
 
   void goToSystem(Sistema s) async{
-      if(s.id == '93'){
-      //if(s.id == '75'){
+      //if(s.id == '93'){
+      if(s.id == '75'){
         Navigator.of(_scaffoldKey.currentContext).pushNamedAndRemoveUntil('/clubeParceriaPage/parcerias',
             ModalRoute.withName('/guardiaoPage'), arguments: _usuario);
       }
@@ -196,11 +196,11 @@ class _GuardiaoPageState extends State<GuardiaoPage> implements UsuarioViewContr
             ModalRoute.withName('/guardiaoPage'), arguments: _usuario);
       }
 
-      if(s.id == '47'){
+      /*if(s.id == '47'){
       //if(s.id == '44'){
         Navigator.of(_scaffoldKey.currentContext).pushNamedAndRemoveUntil('/portalServidorPage',
             ModalRoute.withName('/guardiaoPage'), arguments: _usuario);
-      }
+      }*/
 
   }
 
