@@ -1,5 +1,6 @@
 import 'dart:async';
 import 'dart:convert';
+import 'dart:io';
 import 'package:http/http.dart' as http;
 import 'package:guardiao_app_v3/data/login/login_data.dart';
 import 'package:shared_preferences/shared_preferences.dart';
@@ -20,13 +21,13 @@ class ProdLoginRepository implements LoginRepository{
 
   @override
   Future<int> retornaLogin(String username, String password) async{
-
     //var url = "http://localhost:8080/guardiaomobile/login/";
     var url = "https://apps.tre-ma.jus.br/guardiaomobile/login/";
     var body = {"login": username, "senha": password};
     //var header = {"Accept": "application/x-www-form-urlencoded"};
     var login = 0;
-    var response = await http.post(url, body: body);
+
+    var response = await http.post(Uri.parse(url), body: body);
     final statusCode = response.statusCode;
     if (statusCode == 200) {
       var temp = jsonDecode(response.body);

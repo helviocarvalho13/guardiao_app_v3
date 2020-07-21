@@ -44,6 +44,7 @@ dev_dependencies:
   cached_network_image: ^2.2.0+1
   flutter_cache_manager: ^1.4.1
   rxdart: ^0.23.1
+
 # The following section is specific to Flutter.
 flutter:
 

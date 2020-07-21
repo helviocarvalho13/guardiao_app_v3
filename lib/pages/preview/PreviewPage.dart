@@ -46,8 +46,8 @@ class _PreviewPageState extends State<PreviewPage> {
               child: new RaisedButton(
                   child: new Text('Ir para o Guardião'),
                   onPressed: () async {
-                    String autorizacao = '1';
-                    //String autorizacao = await _getAuthorization();
+                    //String autorizacao = '1';
+                    String autorizacao = await _getAuthorization();
                     if(autorizacao == '1'){
                       Navigator.of(context).pushNamed('/loginPage');
                       //Navigator.push(context, MaterialPageRoute(builder: (context) => new LoginPage()));
