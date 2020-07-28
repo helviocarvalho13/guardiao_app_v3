@@ -53,7 +53,7 @@ class Parceria{
         _email                  = map['email'],
         _googleMaps             = map['googleMaps'],
         _site                   = map['site'],
-        _whatsapp               = map['whatsApp'],
+        _whatsapp               = map['whatsapp'],
         _telefone1              = map['telefone1'],
         _telefone2              = map['telefone2'];
 

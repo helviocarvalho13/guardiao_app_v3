@@ -80,8 +80,8 @@ class _ParceriasPageState extends State<ParceriasPage> implements ParceriaViewCo
                         return filter == null || filter == "" ? retornaListaParcerias(_usuario, _parceriasTemp, index, context)
                             : (_parceriasTemp[index].nome.toLowerCase().startsWith(filter.toLowerCase())
                             || _parceriasTemp[index].nome.toLowerCase().contains(filter.toLowerCase())
-                            || _parceriasTemp[index].bairro.toLowerCase().startsWith(filter.toLowerCase())
-                            || _parceriasTemp[index].bairro.toLowerCase().contains(filter.toLowerCase())
+                            || _parceriasTemp[index].bairro == null ? _parceriasTemp[index].nome.toLowerCase().contains(filter.toLowerCase()) : _parceriasTemp[index].bairro.toLowerCase().startsWith(filter.toLowerCase())
+                            || _parceriasTemp[index].bairro == null ? _parceriasTemp[index].nome.toLowerCase().contains(filter.toLowerCase()) : _parceriasTemp[index].bairro.toLowerCase().contains(filter.toLowerCase())
                             || _parceriasTemp[index].retornaRamoAtividade().toLowerCase().startsWith(filter.toLowerCase())
                             || _parceriasTemp[index].retornaRamoAtividade().toLowerCase().contains(filter.toLowerCase())
                         ) ? retornaListaParcerias(_usuario, _parceriasTemp, index, context) : new Column();
@@ -152,18 +152,18 @@ GestureDetector retornaListaParcerias(Usuario usuario, List<Parceria> _parcerias
 
   final headerTextStyle = baseTextStyle.copyWith(
       color: Colors.black,
-      fontSize: 10.0,
+      fontSize: 8.0,
       fontWeight: FontWeight.w600
   );
 
   final regularTextStyle = baseTextStyle.copyWith(
       color: Colors.black,
-      fontSize: 9.0,
+      fontSize: 8.0,
       fontWeight: FontWeight.w400
   );
 
   final subHeaderTextStyle = regularTextStyle.copyWith(
-      fontSize: 10.0,
+      fontSize: 8.0,
       color: Colors.red
   );
 

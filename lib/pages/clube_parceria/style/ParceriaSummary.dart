@@ -47,7 +47,7 @@ class ParceriaSummary extends StatelessWidget {
           new Container(height: 4.0),
           new Text(parceria.nome, style: Style.titleTextStyle),
           new Container(height: 4.0),
-          new Text(parceria.endereco+' - '+parceria.bairro, style: Style.commonTextStyle),
+          new Text(parceria.endereco != null ? parceria.endereco : '' +' - '+parceria.bairro != null ? parceria.bairro : '', style: Style.commonTextStyle),
         ],
       ),
     );
